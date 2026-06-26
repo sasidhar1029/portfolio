@@ -1,0 +1,56 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0A0F1E;
+  --bg2: #0D1428;
+  --bg3: #111827;
+  --card: #0F1929;
+  --cyan: #00D4FF;
+  --cyan-dim: rgba(0, 212, 255, 0.1);
+  --cyan-glow: rgba(0, 212, 255, 0.28);
+  --coral: #FF6B6B;
+  --coral-dim: rgba(255, 107, 107, 0.08);
+  --green: #64FFDA;
+  --white: #F0F4FF;
+  --slate-light: #CCD6F6;
+  --slate: #8892B0;
+  --border: rgba(0, 212, 255, 0.14);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
